@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Jéssica Latorre
+- Luiz Henrique Martins   
+- Guilherme Chadt
 
 Link do Surge: www.link.com.br
 
