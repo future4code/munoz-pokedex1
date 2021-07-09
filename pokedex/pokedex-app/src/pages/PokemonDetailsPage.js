@@ -1,5 +1,5 @@
-const PokemonDetailsPage = () =>{
-    return(
+const PokemonDetailsPage = () => {
+    return (
         <div>
             PokemonDetailsPage
         </div>

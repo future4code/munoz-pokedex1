@@ -1,18 +1,18 @@
-import  PokeCards  from "../components/PokeCards"
-import {ScreenHome} from './styled'
-import {useHistory} from 'react-router-dom'
+import PokeCards from "../components/PokeCards"
+import { ScreenHome } from './styled'
+import { useHistory } from 'react-router-dom'
 
 
 
-const PokedexPage = () =>{
-    const history = useHistory()
-    const goToHomePage = () =>{
-        history.push('/')
+const PokedexPage = () => {
+  const history = useHistory()
+  const goToHomePage = () => {
+    history.push('/')
 
-    }
-    return(
-        <ScreenHome>
-              <header>
+  }
+  return (
+    <ScreenHome>
+      <header>
         <button onClick={goToHomePage}>
           Voltar para lista de pokémons
         </button>
@@ -20,8 +20,8 @@ const PokedexPage = () =>{
           Minha Pokédex
         </h2>
       </header>
-            <PokeCards/>
-        </ScreenHome>
-    )
+      <PokeCards />
+    </ScreenHome>
+  )
 }
 export default PokedexPage

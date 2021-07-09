@@ -1,17 +1,22 @@
-import {PokeCard, ActionsButtons, PokeImage} from './styled'
+import { PokeCard, ButtonsCard, AddButton, DetailsButton, PokeImage } from './styled.js'
 
 
 const PokeCards = () => {
     return (
 
         <PokeCard>
-            <PokeImage/>
-            
-            <ActionsButtons>
-                <button>Adicionar</button>
-                <button>Ver detalhes</button>
-            </ActionsButtons>
-            
+            <PokeImage />
+
+            <ButtonsCard>
+                <AddButton>
+                Adicionar
+            </AddButton>
+
+            <DetailsButton>
+                Ver Detalhes
+            </DetailsButton>
+            </ButtonsCard>
+
 
         </PokeCard>
     )

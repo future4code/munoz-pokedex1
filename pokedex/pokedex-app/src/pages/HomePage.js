@@ -1,31 +1,63 @@
-import  PokeCards  from "../components/PokeCards"
-import {ScreenHome} from './styled'
-import {useHistory} from 'react-router-dom'
+import PokeCards from "../components/PokeCards";
+import { ScreenHome } from './styled';
+import { useHistory } from 'react-router-dom';
+import styled from "styled-components";
+
+const Title = styled.h1`
+font-family: cursive;
+letter-spacing: 4px;
+font-size: 40px;
+text-align: center;
+color: #FFFF00;
+-webkit-text-stroke: 1.4px #4169E1;
+`
+const ButtonPokeList = styled.button`
+background-color: #FFFF00;
+color: #4169E1;
+width: 160px;
+height: 30px;
+border: 2px solid #4169E1;
+font-family: cursive;
+font-weight: bold;
+border-radius: 10px;
+`
 
 
+const HomePage = () => {
 
+  const history = useHistory()
 
-const HomePage = () =>{
+  const goToPokedex = () => {
+    history.push('/PokedexPage')
+  }
 
-    const history = useHistory()
+  const goToPokemonDetails = () => {
 
-    const goToPokedex = () => {
-        history.push('/PokedexPage')
-    }
-    
-    return(
-        <ScreenHome>
-              <header>
-   
-        <button  onClick={goToPokedex}>
+    history.push('/PokemonDetailsPage')
+  }
+
+  return (
+
+    <ScreenHome>
+
+      <header>
+
+        <ButtonPokeList
+          onClick={goToPokedex}>
+
           Ver minha pokedex
-        </button>
-        <h2>
+        </ButtonPokeList>
+
+
+        <Title>
           Lista de Pokémons
-        </h2>
+        </Title>
+
       </header>
-            <PokeCards/>
-        </ScreenHome>
-    )
+
+      <PokeCards />
+
+    </ScreenHome>
+  )
 }
 export default HomePage
