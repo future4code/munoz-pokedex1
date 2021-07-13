@@ -1,26 +1,17 @@
-import Router from './Router' 
-
-
+import Router from "./Router";
+import GlobalStyle from "./styles/global";
 
 function App() {
   return (
-    <div>
-      
-      <main>
-        <Router/>
-      </main>
-
-      <footer>
-        Pokédex - Labenu
-      </footer>
-      
-    </div>
-
-      
-
-
-  
-    
+    <>
+      <div>
+        <GlobalStyle />
+        <main>
+          <Router />
+        </main>
+      </div>
+      <footer>Pokédex - Labenu</footer>
+    </>
   );
 }
 
