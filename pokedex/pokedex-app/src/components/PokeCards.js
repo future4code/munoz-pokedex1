@@ -8,11 +8,13 @@ import {
   PokeImage,
 } from "./styled.js";
 
-const PokeCards = () => {
+ const PokeCards = ({pokemon}) => {
   const history = useHistory();
+  
   const goToDetailsPage = () => {
     history.push("/PokemonDetailsPage");
   };
+
   return (
     <PokeCard>
       <PokeImage />
@@ -25,4 +27,6 @@ const PokeCards = () => {
     </PokeCard>
   );
 };
+
 export default PokeCards;
+

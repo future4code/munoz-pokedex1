@@ -1,3 +1,4 @@
+import GlobalState from "./components/GlobalState/GlobalState";
 import Router from "./Router";
 import GlobalStyle from "./styles/global";
 
@@ -7,7 +8,9 @@ function App() {
       <div>
         <GlobalStyle />
         <main>
-          <Router />
+          <GlobalState>
+            <Router />
+          </GlobalState>
         </main>
       </div>
       <footer>Pokédex - Labenu</footer>
