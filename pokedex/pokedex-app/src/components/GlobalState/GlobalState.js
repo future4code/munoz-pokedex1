@@ -12,17 +12,6 @@ const GlobalState = (props) => {
 
     console.log(pokemons)
 
-    const getPokemonNames = () => {
-        axios
-            .get(`${url}/pokemon`)
-            .then((res) => {
-                // console.log(res)
-                setPokemonNames(res.data.results)
-            })
-            .catch((err) => {
-                // console.log(err.message)
-            })
-    };
 
     useEffect(() => {
         getPokemonNames()
@@ -49,10 +38,23 @@ const GlobalState = (props) => {
         })
     }, [pokemonNames])
 
+    const getPokemonNames = () => {
+        axios
+            .get(`${url}/pokemon`)
+            .then((res) => {
+                // console.log(res)
+                setPokemonNames(res.data.results)
+            })
+            .catch((err) => {
+                // console.log(err.message)
+            })
+    };
+
+    
     const data = { pokemons, setPokemons, pokedex, setPokedex }
 
     return (
-        <GlobalStateContext.Provider value={{ data }}>
+        <GlobalStateContext.Provider value={data}>
             {props.children}
         </GlobalStateContext.Provider>
     )

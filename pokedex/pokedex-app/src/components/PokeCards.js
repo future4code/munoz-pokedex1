@@ -17,12 +17,16 @@ import {
 
   return (
     <PokeCard>
-      <PokeImage />
+      <PokeImage 
+        src={pokemon.sprites && pokemon.sprites.front_default}
+        alt={pokemon.name}
+      
+      />
 
       <ButtonsCard>
         <AddButton>Adicionar</AddButton>
 
-        <DetailsButton onClick={goToDetailsPage}>Ver Detalhes</DetailsButton>
+        <DetailsButton onClick={()=>goToDetailsPage(history, pokemon.name)}>Ver Detalhes</DetailsButton>
       </ButtonsCard>
     </PokeCard>
   );

@@ -3,6 +3,7 @@ import PokeCards from '../../components/PokeCards';
 import { ScreenHome } from '../styled';
 import { useHistory } from 'react-router-dom';
 import { Title, ButtonPokeList } from "./styles";
+import {Header} from '../../components/Header/styled'
 import GlobalStateContext from '../../components/GlobalState/GlobalStateContext';
 
 
@@ -18,35 +19,41 @@ const HomePage = () => {
     history.push('/PokemonDetailsPage');
   }
 
-  const pokemons = useContext(GlobalStateContext)
+  const {pokemons} = useContext(GlobalStateContext)
 
   console.log(pokemons)
 
   return (
 
-    <header>
-      <ScreenHome>
-        {/* {pokemons.map((poke) => {
-          return (
-            <PokeCards key={poke.name} pokemon={poke}/>
-          )
-        })} */}
-
-        <ButtonPokeList
+    
+      <>
+        <Header>
+          <Title>
+            Lista de Pokémons
+          </Title>
+          <ButtonPokeList
           onClick={goToPokedex}>
-
-          Ver minha pokedex
+            Ver minha pokedex
         </ButtonPokeList>
 
-<PokeCards>
-  
-</PokeCards>
+        </Header>
+         
+        <ScreenHome>
 
-        <Title>
-          Lista de Pokémons
-        </Title>
+         {
+          pokemons.map((poke) => {
+            return (
+              <PokeCards key={poke.name} pokemon={poke}/>
+            )
+        })}
+
+       
+
+
+
+       
       </ScreenHome>
-    </header>
+    </>
   )
 }
 export default HomePage
