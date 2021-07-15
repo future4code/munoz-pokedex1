@@ -8,8 +8,9 @@ export const PokeCard = styled.div`
   box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
   border: #4169e1 solid 3px;
   border-radius: 20px;
-  width: 20%;
-  height: 40%;
+  width: 60%;
+  height: 80%;
+  
 `;
 export const ButtonsCard = styled.div`
   display: flex;
@@ -36,7 +37,6 @@ export const DetailsButton = styled.button`
 export const PokeImage = styled.img`
   border: #ffff00 solid 3px;
   border-radius: 20px;
-  height: 75%;
-  width: 80%;
-  margin-bottom: 15px;
+  
+  
 `;
