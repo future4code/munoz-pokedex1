@@ -1,8 +1,10 @@
-import Header from './styled'
+import Header from './styled';
+import pokemonLogo from '../../Image/pokemonLogo.png'
+
 const Header = () =>{
     return(
         <div>
-            header
+        <img src={pokemonLogo}></img>
         </div>
     )
 }

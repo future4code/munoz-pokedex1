@@ -2,9 +2,11 @@ import React, {useContext}  from 'react';
 import PokeCards from '../../components/PokeCards';
 import { ScreenHome } from '../styled';
 import { useHistory } from 'react-router-dom';
-import { Title, ButtonPokeList } from "./styles";
+import { ButtonPokeList } from "./styles";
 import {Header} from '../../components/Header/styled'
 import GlobalStateContext from '../../components/GlobalState/GlobalStateContext';
+import pokemonLogo from '../../Image/pokemonLogo.png'
+import { PokemonLogo } from '../../components/Header/styled';
 
 
 
@@ -28,13 +30,13 @@ const HomePage = () => {
     
       <>
         <Header>
-          <Title>
-            Lista de Pokémons
-          </Title>
+       <div>
+           <PokemonLogo src={pokemonLogo}></PokemonLogo>
           <ButtonPokeList
           onClick={goToPokedex}>
             Ver minha pokedex
         </ButtonPokeList>
+       </div>
 
         </Header>
          

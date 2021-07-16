@@ -13,7 +13,7 @@ color: #FFFF00;
 export const ButtonPokeList = styled.button`
 background-color: #FFFF00;
 color: #4169E1;
-width: 160px;
+width: 300px;
 height: 30px;
 border: 2px solid #4169E1;
 font-family: cursive;

@@ -37,6 +37,5 @@ export const DetailsButton = styled.button`
 export const PokeImage = styled.img`
   border: #ffff00 solid 3px;
   border-radius: 20px;
-  
-  
+
 `;
