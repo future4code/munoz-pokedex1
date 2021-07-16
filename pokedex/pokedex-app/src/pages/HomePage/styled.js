@@ -10,13 +10,12 @@ color: #FFFF00;
 `;
 
 
-export const ButtonPokeList = styled.button`
-background-color: #FFFF00;
-color: #4169E1;
-width: 300px;
-height: 30px;
-border: 2px solid #4169E1;
-font-family: cursive;
-font-weight: bold;
-border-radius: 10px;
-`;
+
+export const PokemonsContainer = styled.div`
+
+justify-items: center;
+display: grid; 
+grid-template-columns: 1fr 1fr 1fr 1fr; 
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+gap: 0px 0px; 
+`

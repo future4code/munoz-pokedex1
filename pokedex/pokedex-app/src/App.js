@@ -1,5 +1,5 @@
 import GlobalState from "./components/GlobalState/GlobalState";
-import Router from "./Router";
+import Router from './routes/Router';
 import GlobalStyle from "./styles/global";
 
 function App() {
