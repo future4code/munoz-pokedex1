@@ -1,5 +1,5 @@
 import React from 'react'
-import {HeaderContainer, LeftButton, RightButton,PokemonLogo} from './styled';
+import {HeaderContainer, LeftButton, RightButton,PokemonLogo, Title} from './styled';
 import pokemonLogo from '../../Image/pokemonLogo.png'
 import {goToPokedex} from '../../routes/coordinator'
 import {useHistory} from 'react-router-dom'
@@ -27,11 +27,11 @@ const Header = ({title, leftButtonFunction, rightButton}) =>{
 
             <LeftButton onClick={leftButtonFunction}>
 
-			{leftButtonText}
+			{leftButtonText()}
 
 			</LeftButton>
 
-            <h1>{title}</h1>
+            <Title>{title}</Title>
 
 			{rightButton && 
             <RightButton onClick={()=>goToPokedex(history)}>

@@ -1,6 +1,6 @@
 import React, {useContext}from 'react'
 import PokeCards from "../../components/PokeCards"
-import { PokedexContainer } from './styled'
+import { PokeCardContainer } from './styled'
 import { useHistory } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import { goToHomePage } from '../../routes/coordinator'
@@ -18,13 +18,14 @@ const PokedexPage = () => {
       title={'Pokedex'}
       leftButtonFunction={()=>goToHomePage(history)}
       />
-      
+       <PokeCardContainer>
       {
           pokedex && pokedex.map((poke) => {
             return (
               <PokeCards key={poke.name} isPokedex pokemon={poke}/>
             )
         })}
+        </PokeCardContainer>
       
 
     </>
