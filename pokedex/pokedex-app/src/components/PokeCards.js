@@ -6,8 +6,8 @@ import {
   PokeCard,
   ButtonsCard,
   PokeImage,
-  PokeCardContainer,
-  ImageContainer
+  
+  
 } from "./styled.js";
 
  const PokeCards = ({pokemon, isPokedex}) => {
@@ -47,15 +47,15 @@ import {
 
   return (
 
-    <PokeCardContainer>
+    
       <PokeCard>
-      <ImageContainer>
+     
         <PokeImage 
         src={pokemon.sprites && pokemon.sprites.front_default}
         alt={pokemon.name}
       
         />
-      </ImageContainer>
+      
       
 
       <ButtonsCard>
@@ -68,7 +68,7 @@ import {
         </button>
       </ButtonsCard>
     </PokeCard>
-    </PokeCardContainer>
+    
     
   );
 };
