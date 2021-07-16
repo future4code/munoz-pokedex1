@@ -1,8 +1,46 @@
-import Header from './styled'
-const Header = () =>{
+import React from 'react'
+import {HeaderContainer, LeftButton, RightButton,PokemonLogo} from './styled';
+import pokemonLogo from '../../Image/pokemonLogo.png'
+import {goToPokedex} from '../../routes/coordinator'
+import {useHistory} from 'react-router-dom'
+
+const Header = ({title, leftButtonFunction, rightButton}) =>{
+
+    const history = useHistory()
+
+	const leftButtonText = () =>{
+
+		switch (title) {
+			case "Lista de Pokémons":
+				return "Ir para Pokédex"
+			case "Pokédex":
+				return "Voltar para lista de pokemons"
+			default:
+				return "Voltar"
+		}
+	}
+	
     return(
-        <div>
-            header
-        </div>
+        <HeaderContainer>
+
+            < PokemonLogo src={pokemonLogo}/>
+
+            <LeftButton onClick={leftButtonFunction}>
+
+			{leftButtonText}
+
+			</LeftButton>
+
+            <h1>{title}</h1>
+
+			{rightButton && 
+            <RightButton onClick={()=>goToPokedex(history)}>
+
+				Ir para Pokédex
+				
+			</RightButton>}
+
+        </HeaderContainer>
     )
 }
+export default Header

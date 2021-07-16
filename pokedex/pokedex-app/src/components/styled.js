@@ -17,26 +17,21 @@ export const ButtonsCard = styled.div`
   justify-content: space-between;
 `;
 
-export const AddButton = styled.button`
-  border-radius: 10px;
-  /* background-color: #FFFF00; 
- color: #4169E1; 
- font-family: cursive; 
- font-weight: bold; */
-  border: 2px solid #4169e1;
-`;
-export const DetailsButton = styled.button`
-  border-radius: 10px;
-  /* background-color: #FFFF00;
- color: #4169E1;
- font-family: cursive;
- font-weight: bold; */
-  border: 2px solid #4169e1;
-`;
+
 
 export const PokeImage = styled.img`
   border: #ffff00 solid 3px;
   border-radius: 20px;
-  
-  
+
 `;
+export const PokeCardContainer = styled.div`
+margin-top: 50px;
+justify-items: center;
+width: 100%;
+display: grid;
+grid-template-columns: 2fr 2fr 2fr 2fr; 
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+gap: 30px 20px; 
+`
+export const ImageContainer =styled.div`
+`
