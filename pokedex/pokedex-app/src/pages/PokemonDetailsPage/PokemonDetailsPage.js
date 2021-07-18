@@ -6,7 +6,7 @@ import { Container } from "./styles";
 
 
 const PokemonDetailsPage = () => {
-  
+
 
 
   return (

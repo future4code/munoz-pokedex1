@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const PokeCardContainer = styled.div`
-
+margin-top: 4vh;
 justify-items: center;
 display: grid; 
 grid-template-columns: 1fr 1fr 1fr 1fr; 

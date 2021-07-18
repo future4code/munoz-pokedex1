@@ -1,14 +1,14 @@
 import React from 'react'
-import {HeaderContainer, LeftButton, RightButton,PokemonLogo, Title} from './styled';
+import { HeaderContainer, LeftButton, RightButton, PokemonLogo, Title } from './styled';
 import pokemonLogo from '../../Image/pokemonLogo.png'
-import {goToPokedex} from '../../routes/coordinator'
-import {useHistory} from 'react-router-dom'
+import { goToPokedex } from '../../routes/coordinator'
+import { useHistory } from 'react-router-dom'
 
-const Header = ({title, leftButtonFunction, rightButton}) =>{
+const Header = ({ title, leftButtonFunction, rightButton }) => {
 
-    const history = useHistory()
+	const history = useHistory()
 
-	const leftButtonText = () =>{
+	const leftButtonText = () => {
 
 		switch (title) {
 			case "Lista de Pokémons":
@@ -19,28 +19,27 @@ const Header = ({title, leftButtonFunction, rightButton}) =>{
 				return "Voltar"
 		}
 	}
-	
-    return(
-        <HeaderContainer>
 
-            < PokemonLogo src={pokemonLogo}/>
+	return (
+		<HeaderContainer>
 
-            <LeftButton onClick={leftButtonFunction}>
+			< PokemonLogo src={pokemonLogo} />
 
-			{leftButtonText()}
+			<LeftButton onClick={leftButtonFunction}>
+
+				{leftButtonText()}
 
 			</LeftButton>
 
-            <Title>{title}</Title>
 
-			{rightButton && 
-            <RightButton onClick={()=>goToPokedex(history)}>
+			{rightButton &&
+				<RightButton onClick={() => goToPokedex(history)}>
 
-				Ir para Pokédex
-				
-			</RightButton>}
+					Ir para Pokédex
 
-        </HeaderContainer>
-    )
+				</RightButton>}
+
+		</HeaderContainer>
+	)
 }
 export default Header
