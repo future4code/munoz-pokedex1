@@ -1,6 +1,7 @@
 import { useHistory } from "react-router";
 import { Menu } from "./styles";
 
+// menu com o nome do pokemon e botões de navegação
 const MenuDetails = () => {
   const history = useHistory();
   const backToPage = () => {

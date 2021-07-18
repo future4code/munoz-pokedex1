@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Content } from "./styles";
 
+// componente que irá ficar as imagens de frente e de tráz do pokemon
 const ImagesDetails = () => {
   return (
     <Container>
