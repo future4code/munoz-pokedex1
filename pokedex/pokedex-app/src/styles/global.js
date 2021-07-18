@@ -27,8 +27,10 @@ export default createGlobalStyle`
     border: 6px solid #4169E1; 
     font-family: cursive; 
     font-weight: bold;
+    letter-spacing: 2px;
     border: unset;
     cursor: pointer;
     text-transform: uppercase;
+
   }
 `;

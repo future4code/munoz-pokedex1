@@ -13,7 +13,7 @@ function App() {
           </GlobalState>
         </main>
       </div>
-      
+
     </>
   );
 }
