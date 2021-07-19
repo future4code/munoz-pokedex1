@@ -1,14 +1,10 @@
-import TypesAndMovesDetails from "../../components/TypesAndMovesDetails";
 import ImagesDetails from "../../components/ImagesDetails";
-import StatsDetails from "../../components/StatsDetails";
 import MenuDetails from "../../components/MenuDetails";
+import StatsDetails from "../../components/StatsDetails";
+import TypesAndMovesDetails from "../../components/TypesAndMovesDetails";
 import { Container } from "./styles";
 
-
 const PokemonDetailsPage = () => {
-
-
-
   return (
     <>
       <MenuDetails />
